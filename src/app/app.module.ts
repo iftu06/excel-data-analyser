@@ -1,3 +1,4 @@
+import { DataMappingService } from './excel-data-analyser/data-mapping/services/data-mapping.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,6 +20,8 @@ import {AccordionModule} from 'primeng/accordion';     //accordion and accordion
 import {MenuItem} from 'primeng/api';
 import {RouterModule} from "@angular/router";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -28,9 +31,10 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataMappingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

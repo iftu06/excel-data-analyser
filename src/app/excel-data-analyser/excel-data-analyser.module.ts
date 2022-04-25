@@ -18,7 +18,6 @@ import {SharedModule} from "primeng/api";
 
 import {AutoCompleteModule} from "primeng/autocomplete";
 import { DataIngestionComponent } from './data-ingestion/data-ingestion.component';
-import { DataMappingComponent } from './data-mapping/data-mapping.component';
 import { DataAnalysisComponent } from './data-analysis/data-analysis.component';
 import {routes} from "./excel-data-analyser.routes";
 import {ButtonModule} from "primeng/button";
@@ -42,6 +41,8 @@ import {CalendarModule} from "primeng/calendar";
 import {CardModule} from "primeng/card";
 import {TabMenuModule} from "primeng/tabmenu";
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { DataMappingComponent } from "./data-mapping/component/data-mapping.component";
+import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
   imports: [
@@ -83,7 +84,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     CalendarModule,
     CardModule,
     TabMenuModule,
-    DragDropModule
+    DragDropModule,
+    MatDialogModule
 
   ],
   declarations: [
